@@ -1,0 +1,241 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #333;
+    padding: 15px 0;
+}
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections Styling */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#home {
+    background-color: #f0f0f0;
+}
+
+#about {
+    background-color: #fff;
+}
+
+#services {
+    background-color: #f0f0f0;
+}
+
+#contact {
+    background-color: #fff;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.contact-form {
+    width: 48%;
+}
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form form button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form form button:hover {
+    background-color: #555;
+}
+
+.timeline-container {
+    position: relative;    /* ← neu ergänzen */
+  }
+
+.timeline-date {
+    position: absolute;    /* nötig, damit top/left wirken */
+    top: 50%;              /* 50% von der Höhe des Items */
+    transform: translateY(-50%); /* in der Mitte halten */
+  }
+
+.contact-info {
+    width: 48%;
+    text-align: left;
+}
+.contact-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.contact-info ul {
+    list-style-type: none;
+}
+.contact-info ul li {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Timeline Container */
+#timeline {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#timeline h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+/* Timeline Section */
+.timeline-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+  }
+  .timeline-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Timeline Container */
+  .timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 3px solid #333;
+  }
+  
+  /* Individual Items */
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Links/rechts verteilen */
+  .timeline-item:nth-child(odd)  { left: 0%; }
+  .timeline-item:nth-child(even) { left: 50%; }
+  
+  /* Datum */
+  .timeline-date {
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .timeline-item:nth-child(odd)  .timeline-date { left: 0;   text-align: left;  }
+  .timeline-item:nth-child(even) .timeline-date { left: 0;   text-align: right; }
+
+  .timeline-content {
+    margin-left: 4em;             /* genug Abstand für die Jahreszahl */
+  }
+  
+  /* Punkt auf der Linie */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .timeline-item:nth-child(odd)::before  { left: -8px;  }
+  .timeline-item:nth-child(even)::before { left: -8px; }
+  
+  /* 3. Datum ebenfalls vertikal zentrieren und seitlich versetzen */
+  .timeline-date {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .timeline-item:nth-child(odd)  .timeline-date { left: 20px;  text-align: left;  }
+  .timeline-item:nth-child(even) .timeline-date { left: 20px; text-align: right; }
+  
+  
+  /* Content-Box */
+  .timeline-content {
+    background-color: #f7f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 90%;
+  }
+  .timeline-item:nth-child(odd)  .timeline-content { margin-right: auto;  }     #auto
+  .timeline-item:nth-child(even) .timeline-content { margin-right: auto;   }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline-item {
+      width: 100%;
+      left: 0!important;
+      margin-bottom: 30px;
+    }
+    .timeline-item .timeline-date {
+      position: relative;
+      transform: none;
+      left: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .timeline-item::before { display: none; }
+  }
+  
